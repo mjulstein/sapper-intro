@@ -4,10 +4,11 @@
 <section>
   <h1>TypeScript!?</h1>
   <p>
-    To convert your app template to TypeScript run the following before you run <code
-      >npm install</code
-    >
-    <code> node ./scripts/setupTypeScript.js </code>
-    For more readme.md is a good place to look.
+    To convert the app template to TypeScript run the following before you run
+    <code>npm install</code>
   </p>
+  <pre>
+    <code> node ./scripts/setupTypeScript.js </code>
+    </pre>
+  <p>For more, the readme.md in the template is a good place to look.</p>
 </section>

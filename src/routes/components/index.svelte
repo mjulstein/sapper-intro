@@ -24,7 +24,7 @@
 </pre>
 {#if !showComponent}
   <button on:click={() => (showComponent = true)} transition:fade>Click the
-    button below to show the component</button>
+    button to show the resulting component</button>
 {/if}
 {#if showComponent}
   <div>Your first <span>{text}</span></div>
