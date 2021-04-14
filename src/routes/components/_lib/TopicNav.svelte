@@ -3,7 +3,7 @@
   import { fly } from "svelte/transition";
   export let path;
   export let selected = null;
-  $: expanded = !selected;
+  let expanded = false;
 </script>
 
 <style>
