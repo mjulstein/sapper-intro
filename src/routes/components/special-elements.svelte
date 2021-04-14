@@ -23,14 +23,6 @@
   let selectedComponent = componentRefs[0];
 </script>
 
-<style>
-  div {
-    min-height: 60vh;
-    padding-top: 100%;
-    box-sizing: border-box;
-  }
-</style>
-
 <h2>Special Elements</h2>
 <p>
   Svelte comes with a few spacial elements.<br />
@@ -39,15 +31,16 @@
   <br />
   Depending on what you want to achieve;
   <br />
-  recursion, refering to a component in code or the amount of pixels the client
-  has scrolled,<br />
+  recursion, refering to a component in code or the amount of pixels the client has
+  scrolled,<br />
   the special elements can help you.
 </p>
 
 <p>
   For more about the special components,
-  <a href="https://svelte.dev/examples" target="_blank">good examples can be
-    found on the official svelte website.</a>
+  <a href="https://svelte.dev/examples" target="_blank"
+    >good examples can be found on the official svelte website.</a
+  >
 </p>
 <p>
   Use svelte:body to check for mouseenter and mouseleave events<br />we know
@@ -57,8 +50,10 @@
 </p>
 <article>
   <p>
-    By using the svelte:component element you can refer to compoents in code.<br />
-    Useful when you want to switch which compoent to show depending on a state.<br />
+    By using the svelte:component element you can refer to compoents in code.<br
+    />
+    Useful when you want to switch which compoent to show depending on a state.<br
+    />
     Example:
   </p>
   <select bind:value={selectedComponent}>
@@ -70,7 +65,7 @@
 </article>
 <div>
   <p>
-    By binding the scrollY property from the body using svelte:body,<br />
+    By binding the scrollY property from the window using svelte:window,<br />
     we know that this page has been scrolled
     {Math.floor(scrolledY)}
     pixels from the top.
@@ -80,8 +75,8 @@
   <p transition:fade|local>
     By using svelte:self we can put this page inside itself ( useful for
     recursion )<br />
-    Be careful to make some conditions for this to happen, for example pressing
-    the button below
+    Be careful to make some conditions for this to happen, for example pressing the
+    button below
     <br />
   </p>
   <button on:click={() => (clone = true)} transition:fade|local>
@@ -99,3 +94,11 @@
 <svelte:body
   on:mouseenter={handleMouseenter}
   on:mouseleave={handleMouseleave} />
+
+<style>
+  div {
+    min-height: 60vh;
+    padding-top: 100%;
+    box-sizing: border-box;
+  }
+</style>
